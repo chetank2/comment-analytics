@@ -1,0 +1,14 @@
+{
+  "name": "creator-comment-compass-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension for analyzing YouTube comments",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r manifest.json popup scripts icons dist/",
+    "package": "npm run build && cd dist && zip -r ../extension.zip *"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^7.2.0"
+  }
+}

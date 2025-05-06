@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorComment Compass</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CreatorComment Compass</h1>
+      <p class="subtitle">Analyze your YouTube comments</p>
+    </div>
+    
+    <!-- Login Section (shown when not logged in) -->
+    <div id="login-section" class="section">
+      <p>Sign in with Google to analyze your YouTube comments</p>
+      <button id="login-button" class="primary-button">
+        <img src="../icons/google.svg" alt="Google" class="button-icon">
+        Sign in with Google
+      </button>
+    </div>
+    
+    <!-- Main Section (shown when logged in) -->
+    <div id="main-section" class="section hidden">
+      <div id="user-info">
+        <img id="user-avatar" src="" alt="Profile">
+        <span id="user-name"></span>
+      </div>
+      
+      <div id="video-info" class="hidden">
+        <img id="video-thumbnail" src="" alt="Video thumbnail">
+        <h3 id="video-title"></h3>
+      </div>
+      
+      <div id="action-buttons">
+        <button id="analyze-button" class="primary-button">Analyze This Video</button>
+        <button id="dashboard-button" class="secondary-button">View Insights</button>
+        <select id="video-select" class="hidden">
+          <option value="">Select a previous video</option>
+        </select>
+      </div>
+      
+      <div id="status" class="hidden">
+        <div class="loader"></div>
+        <p id="status-text">Analyzing comments...</p>
+      </div>
+    </div>
+    
+    <!-- Error Section -->
+    <div id="error-section" class="section hidden">
+      <p id="error-message"></p>
+      <button id="retry-button" class="secondary-button">Retry</button>
+    </div>
+    
+    <div class="footer">
+      <p>Free plan: <span id="videos-analyzed">0</span>/3 videos this month</p>
+      <a href="#" id="upgrade-link">Upgrade to Pro</a>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
